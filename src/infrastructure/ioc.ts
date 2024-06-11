@@ -16,8 +16,8 @@ container.register("db.repository", MockRepository);
 const dbRepository = container.get("db.repository");
 
 container
-  .register("lead.creator", LeadCreate)
-  .addArgument([dbRepository, wsTransporter]);
+    .register("lead.creator", LeadCreate)
+    .addArgument([dbRepository, wsTransporter]);
 
 const leadCreator = container.get("lead.creator");
 
